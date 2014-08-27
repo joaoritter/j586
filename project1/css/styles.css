@@ -1,0 +1,78 @@
+.container, .container-fluid{
+    border: thin solid black;
+}
+
+.navbar > div{
+    height: 80px;
+}
+
+.dashboard_box{
+    height: 40px;
+}
+
+.content_box{
+     margin-top: 20px;
+}
+
+.footer > div{
+    height: 20px;
+}
+
+.information_box{
+    border: thin solid red;
+}
+
+.information_left_col, .information_right_col{
+    border: thin solid blue;
+    padding: 0px;
+}
+
+.announcements_box{
+    height: 40px;     
+}
+
+/* children of announcements_box */
+
+.announcements_box > div{ 
+    height: 100%;
+    border: thin solid black;
+} 
+    
+
+/* children of information left*/
+
+.information_left_col > div{
+    width: 100%;
+    border: thin solid black;
+}
+
+.tasks_box{
+    height: 80px;
+}
+
+.recommendations_box{
+    height: 80px;
+}
+
+/* children of information right */
+
+.information_right_col > div{
+    width: 100%;
+    border: thin solid black;
+}
+
+.analytics_box{
+    height: 120px;
+}
+
+.graph_box{
+    height: 40px;
+}
+
+.DIN_box{
+     height: 40px;
+}
+
+ 
+
+  
