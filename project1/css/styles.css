@@ -1,78 +1,926 @@
-.container, .container-fluid{
-    border: thin solid black;
+
+/* the basics */
+
+html{
+    margin: 0;     
 }
 
-.navbar > div{
-    height: 80px;
+body{
+    font-family: "myriad-pro",sans-serif;
 }
+
+h1, h2, h3, h4, h5{
+    margin: 0; 
+    padding: 0;
+}
+
+h1{ font-size: 25px; }
+h2{
+    font-size: 32px;  
+    color: #2498f4;
+}
+h3{
+    font-size: 17px;
+    color: #2498f4;
+}
+
+h4{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+h5{  font-size: 16px; }
+.container{
+     padding:0;
+}
+.row{
+     margin: 0;
+     padding: 0;
+}
+     
+
+/************** styling the light blue header bar ***********************/
+
+
+/* sets the top bar to light blue */
+.header_bar{
+     background-color: #208de4
+}
+
+/* the header box is a container within the header-bar fluid container.
+ * We want to set its height and the line height of its text to be the same to center vertically */
+.header_box{
+     height: 45px; 
+}
+
+.header_box p{
+     line-height: 45px;
+     color: white;
+     margin: 0 5px;
+}
+
+/* center the images. we know the header bars height wont change responsively so this is safe */
+.header_box img{
+     margin: 10px 5px;
+}
+
+
+
+
+/*********************** navbar stuff *****************************/
+
+.navbar{
+    background-color: #134670;     
+    border-radius: 0px;
+    height: 60px;
+}
+
+.navbar > .container{
+     height: 100%;
+}
+
+.navbar ul{
+    margin: 10px 5px 0 0; /* offset the left margin of the li's*/
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+/* make the list inline and space out horizontally */
+.navbar ul li{
+    display: inline;
+    margin: 0 12px;
+}
+
+.navbar ul li img{
+    width: 25px;
+    cursor: pointer;
+}
+
+
+.navbar .active_indicator{
+    display:none;
+}
+
+
+
+
+/****************** dashboard stuff **********************/
 
 .dashboard_box{
-    height: 40px;
+    margin-top: 17px;
+    background-color: #33cc66; 
+    height: 77px;
 }
+
+.dashboard_box h1{
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
+
+.dashboard_box .input-group{
+    width: 250px;
+    height: 20px;
+    margin: auto;
+    font-family: "myriad-pro",sans-serif;
+    padding: 0;
+}
+
+.dashboard_box input{
+    clear: both;
+    border-right: 0px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.dashboard_box .glyphicon{
+    font-size: .9em;
+    color: #2498f4;
+}
+
+/*************** content_box stuff ***************************/
+
+/* make rounded-rect and light vertical gradient */
 
 .content_box{
-     margin-top: 20px;
+     margin-top: 17px;
+     padding: 1em;
+     border-radius: 10px;
+     border-color: thin solid black;
+     background: -webkit-linear-gradient(#f6f6f6, #ffffff); /* For Safari 5.1 to 6.0 */
+     background: -o-linear-gradient(#f6f6f6, #ffffff); /* For Opera 11.1 to 12.0 */
+     background: -moz-linear-gradient(#f6f6f6, #ffffff); /* For Firefox 3.6 to 15 */
+     background: linear-gradient(#f6f6f6, #ffffff); /* Standard syntax */
 }
 
-.footer > div{
-    height: 20px;
+.content_box > row{
+     border: thin solid #e7e7e7;
 }
 
-.information_box{
-    border: thin solid red;
-}
 
-.information_left_col, .information_right_col{
-    border: thin solid blue;
-    padding: 0px;
-}
+/**************** announcements stuff *************************/
 
 .announcements_box{
-    height: 40px;     
+    background-color: white;
+    border:thin solid #e7e7e7;
 }
 
-/* children of announcements_box */
-
-.announcements_box > div{ 
-    height: 100%;
-    border: thin solid black;
-} 
-    
-
-/* children of information left*/
-
-.information_left_col > div{
-    width: 100%;
-    border: thin solid black;
+.announcements_box h4{
+    float: left;
+    margin-top: 8px;
+    color: #fe7f13;     
 }
 
-.tasks_box{
-    height: 80px;
+.announcements_box p{
+    color: #777777;     
 }
 
+.announcements_box .button_left{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* flips the arrow */
+.mirror{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+
+
+/****************** tasks stuff **************************/
+
+.information_left_col{
+    border:thin solid #e7e7e7;
+    border-top: 0px;
+    background: white;
+    padding: 0;
+    height: 859px;
+}
+
+.tasks_box .settings_img{
+    margin: 20px 25px 25px 25px; 
+}
+
+.tasks_box h2{
+     margin: 20px 0 0 20px;
+}
+
+.tasks_box ul{
+    clear: both; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.tasks_box ul li{
+    height: 62px;
+    border-bottom: thin solid #e7e7e7;
+    cursor: pointer;
+}
+
+.tasks_box ul li h3{
+    line-height: 60px;
+    margin-left: 16px;
+}
+
+.tasks_box ul li .list_number_circle{
+     height: 25px;
+     width: 25px;
+     margin-top: 16px;
+     margin-left: 15px;
+     border-radius: 50px;
+     background-color: #32cc66;
+}
+
+.tasks_box ul li .list_number_circle h4{
+    margin: 5px 0px 0px 8px;
+    color: white;
+    font-size: 17px; 
+}
+
+.tasks_box ul li .list_box_right{
+    width: 61px;
+    height: 31px;
+    margin-top: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: thin solid  #dddddd;
+}
+
+.tasks_box ul li .list_box_right .glyphicon{
+     font-size: 1.5em;
+     margin: 3px 7px 0 6px;
+     color: #2498f4
+}
+
+.tasks_box ul li .list_box_right h4{
+    line-height: 30px; 
+    color: #2498f4;
+}
+
+.tasks_box ul li:hover > .list_number_circle{
+    background-color: #cccccc;    
+}
+
+.tasks_box ul li:hover > h3{
+    color: #cccccc;    
+}
+
+.tasks_box ul li:hover > .list_box_right .glyphicon{
+    color: #cccccc;    
+}
+
+.tasks_box ul li:hover > .list_box_right h4{
+    color: #cccccc;    
+}
+
+.tasks_box ul li:active > .list_number_circle{
+    background-color: #bbb;    
+}
+
+.tasks_box ul li:active > h3{
+    color: #bbb;    
+}
+
+.tasks_box ul li:active > .list_box_right .glyphicon{
+    color: #bbb;    
+}
+
+.tasks_box ul li:active > .list_box_right h4{
+    color: #bbb;    
+}
+
+
+/*************** recommendations stuff **************************/
 .recommendations_box{
-    height: 80px;
+    border-bottom: thin solid #e7e7e7;
 }
 
-/* children of information right */
+.recommendations_box h2{
+     margin: 20px 0 10px 20px;
+}
 
-.information_right_col > div{
-    width: 100%;
-    border: thin solid black;
+.recommendations_box ul{
+    clear: both; 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.recommendations_box ul li{
+    border-top: thin solid #e7e7e7;
+    min-height: 55px;
+    cursor:pointer; 
+}
+
+.recommendations_box ul li:hover{
+     background-color: #eee;
+}
+.recommendations_box ul li:active{
+     background-color: #ddd;
+}
+
+.recommendations_box ul li img{
+}
+
+.recommendations_box ul li .img_box{
+     width: 25px;
+     height: 26px;
+     margin: 10px 11px 5px 17px;
+}
+
+.recommendations_box ul li .list_details{
+    margin-top: 5px;
+    width: 260px;
+}
+
+.recommendations_box ul .bigger{
+     height: 65px;
+}
+
+.recommendations_box ul li h5{
+    color: #777;
+    margin-top: -3px;
+}
+
+.recommendations_box ul li .mini_text{
+    font-family: "myriad-pro", sans-serif;
+    font-size: 10px;
+    color: #777;
+}
+
+
+/******************** analyitcs stuff ****************************/
+
+.information_right_col{
+    border:thin solid #e7e7e7;
+    border-top: 0px;
+    border-left: 0px;
+    background: white;
+    padding: 0;
 }
 
 .analytics_box{
-    height: 120px;
+     height: 403px;
 }
 
-.graph_box{
-    height: 40px;
+.analytics_box h2{
+     margin: 32px 0 10px 35px;
 }
+
+.analytics_box h4{
+     font-size: 13px;
+     color: #999;
+}
+
+.analytics_box .analytics_body{
+     height: 260px;
+}
+
+.analytics_box .analytics_body .channels{
+     border-left: thin solid #e7e7e7;
+     height: 100%;
+     width: 20%;
+}
+
+.analytics_box .analytics_body .activity{
+     border-right: thin solid #e7e7e7;
+     width: 80%;
+     height: 100%;
+     padding-right: 45px;
+}
+
+.analytics_box .analytics_body .activity .activity_top{
+    width: 100%;         
+}
+
+.analytics_box .analytics_body .activity .activity_top h4{
+     line-height: 35px; 
+     margin-left: 45px;
+}
+
+.analytics_box .analytics_body .activity .activity_top .date_button{
+     height: 33px;
+     border: thin solid #e7e7e7;
+     font-family: "myriad-pro", sans-serif;
+}
+
+
+
+.analytics_box .analytics_body .activity .activity_top .dropdown button .glyphicon{
+    color: #fe7f13;
+    margin-left: -2px;
+    margin-top: 2px;
+}
+
+.analytics_box .analytics_body .activity img{
+     width: 99%;
+     clear: both;
+     margin-left: 25px;
+     margin-top: 10px;
+}
+
+.analytics_box .checkbox_form{ 
+    clear:both;
+}
+
+.analytics_box .analytics_body .channels .channels_content{
+     margin: 0 0 0 15px;
+}
+
+.analytics_box .analytics_body .channels .channels_content h4{
+     margin: 15px 0 5px 0;
+}
+
+.analytics_box .checkbox_form{
+     margin: 20px 0 100px 0px;
+     width: 475px;
+}
+
+/***checkbox stuff***/
+
+.analytics_box .checkbox_form input[type="checkbox"]{
+    float: left;
+    opacity: 0;
+    margin-right: -19px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.analytics_box .checkbox_form input[type="checkbox"] + label{
+    margin: 0 0 -5px 0;
+    clear: none;
+    padding: 16px 0 6px 21px;
+    background: url('../img/unchecked.png') left center no-repeat;
+}
+
+.analytics_box .checkbox_form img{
+     margin-top: 2px;
+     margin-right: 10px;
+}
+
+
+.analytics_box .checkbox_form input[type="checkbox"]:checked + label{
+    background-image: url('../img/checked.png');     
+}
+
+
+
+/****************** bannerbox stuff *******************************/
+
+.banner_box{
+     height: 274px;
+     padding: 10px 40px;
+     border: thin solid #e7e7e7;
+     border-left: none;
+     border-right: none;
+}
+
+.banner_box .banners_body{
+    width: 100%;
+    margin: auto;
+}
+
+
+.banner_box .banners_body .contacts, .banner_box .banners_body .customers {
+    margin-top: -48px;
+}
+
+
+/******************** Did you know stuff **********************/
 
 .DIN_box{
-     height: 40px;
+     height: 181px;
+     padding: 15px;
 }
 
- 
+.DIN_box > div{
+     height: 147px;
+     width: 98%;
+     margin: auto;
+     padding: 40px 60px;
+     background-color: #2498f4;
+     border-radius: 2px;
+}
+
+.DIN_box > div p{
+    color: white; 
+}
+
+.DIN_box > div .half_left_circle{
+    height: 50px;
+    width: 25px;
+    border-radius: 0 90px 90px 0;
+    background-color: white;
+    margin-left: -60px;
+    margin-top: 9px;
+}
+
+.DIN_box > div .half_right_circle{
+    height: 50px;
+    width: 25px;
+    border-radius: 90px 0 0 90px;
+    background-color: white;
+    margin-right: -60px;
+    margin-top: -65px;
+}
+
+.DIN_box > div .half_left_circle span, .DIN_box > div .half_right_circle span{ 
+    margin-top: 15px;
+    color: #ff9b13;
+    
+}
+
+.DIN_box > div > div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+
+/***************** pics box stuff *****************************/
+
+.pics_box{
+     background-color: #2498f4;
+}
+
+.pics_box .pics_body{
+     margin: auto;
+     width: 90%;
+}
+
+.pics_box > div > div{
+     margin: 30px;
+     height: 160px;
+     width: 280px;
+     background: white;
+     border-radius: 5px;
+}
+
+.pics_box .afroman{
+    margin-left: 12px;
+    margin-top: -10px;  
+}
+
+
+
+/************* footer stuff *******************/
+
+.footer{
+     background-color: #f7f7f7;
+     height: 50px;
+     margin-top: 50px;
+     font-family: "myriad-pro", sans-serif;
+    color: #b0b0b0;
+    line-height: 50px;
+    box-shadow: 0  -5px 5px #ddd; 
+}
+
+.footer .col{
+     border-right: thin solid #ddd;
+}
+
+.footer p{
+    display: inline;
+    padding: 0;
+    margin: 0;
+    line-height: 50px;
+}
+
+.footer .adjust_margin{
+     margin-right: -10px;
+}
+
+.footer .car_icon{
+    margin-left: -12px;     
+    margin-right: 1px;
+    margin-top: 3px;
+}
+
+.footer .social_media_icon{
+     margin-left: -5px;
+}
+
+.footer .col1{
+    width: 175px; 
+    float: right;
+}
+
+.footer .col1 img{
+     margin: 0 5px;
+}
+
+.footer strong{
+     color: #2498f2;
+}
+
+.footer .glyphicon{
+     color: #2498f2;
+     margin-top: 16px;
+}
+
+
+/******************** utility classes ****************************/
+.right{
+     float: right;
+}
+
+.left{ 
+    float: left;
+}
+
+.qwer{
+     border: thin solid black;
+}
+
+.inherit_height{
+    height: 100%
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*custom viewport divide*/
+@media (min-width: 590px){
+        
+    .analytics_box .analytics_body .activity img{
+        width: auto;
+    }
+    .analytics_box .checkbox_form{
+         margin: 20px 0 100px 100px;
+         width: 475px;
+    }
+
+}
 
   
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    /****************** navbar stuff *******************/
+
+    .navbar{
+        background-color: #134670;     
+        border-radius: 0px;
+        height: 115px;
+    }
+
+    .navbar ul{
+        margin: 20px 5px 19px 5px; /*19 pixel bottom border so the position for the active_indicator is right*/
+    }
+
+    /* space out the list items horizontally */
+    .navbar ul li{
+        margin: 0 15px;
+    } 
+
+    /* bigger icons for bigger screens */
+    .navbar ul li img{
+        width: 50px;
+    }
+
+    .navbar .active_indicator{
+        display: inline;
+        margin-left: 143px;     
+    }
+
+    /************************ dashboard stuff **************************/
+    
+    .dashboard_box .input-group{
+        width: 250px;
+    }
+
+
+    .dashboard_box h1{
+        font-size: 36px;
+        text-align: left;
+        margin-left: 20px;
+        line-height: 70px;
+    }
+
+    .dashboard_box .input-group{
+        width: 280px;
+        height: 20px;
+        margin: -59px 15px 0px 0px;
+        float: right;
+    }
+
+    .dashboard_box input{
+        clear: none;
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .dashboard_box .glyphicon{
+        font-size: 1.25em;
+    }
+
+    /**************** announcements stuff *************************/
+    
+    
+    .announcements_box .button_left{
+        margin-left: -20px;
+    }
+
+    .announcements_box .button_right{
+        margin-right: -5px;
+    }
+
+
+
+    /******************** tasks stuff *********************/
+
+    .tasks_box ul li h3{
+        font-size: 21px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    
+    /****************** navbar stuff *******************/
+
+    .navbar .active_indicator{
+        margin-left: 255px;     
+    }
+   
+
+
+    /**************** announcements stuff *************************/
+    
+    .announcements_box{
+        height: 50px; 
+    }
+
+    .announcements_box .col{
+         border:thin solid #e7e7e7;
+    }
+   
+    .announcements_box h4{
+        line-height: 45px;
+        margin: 2px;
+        margin-left: 0; 
+    }
+
+    .announcements_box p{
+        line-height: 48px;
+        margin-left: 0; 
+    }
+
+    .announcements_box .announcements_button{
+         margin: 12px 0;
+    }
+
+    .announcements_box .button_left{
+         margin-left: -4px;
+         margin-right: 9px;
+    }
+
+    .announcements_box .button_right{
+         margin-right: -6px;
+    }
+
+
+    /******************** tasks stuff *********************/
+
+    .tasks_box ul li h3{
+        font-size: 18px;
+    }
+
+    /******************** recommendations stuff *********************/
+    
+    .recommendations_box ul li .list_details{
+        margin-top: 5px;
+        width: 220px;
+    }
+
+
+
+    /***************** pics stuff ********************/
+
+    .pics_box > div > div{
+         margin: 8px;
+         height: 160px;
+         width: 280px;
+         background: white;
+         border-radius: 5px;
+    }
+
+    .pics_box > .pics_body{
+         width: 95%;
+    }
+
+    /******************* footer *********************/
+    .footer .centered{
+        width: 80px;
+         margin: auto;
+    }
+
+    .footer .social_media_icon{
+         margin-left: -13px;
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+    /****************** navbar stuff *******************/
+
+    .navbar .active_indicator{
+        margin-left: 355px;     
+    }
+
+
+    /**************** announcements stuff *************************/
+    .announcements_box h4{
+        margin-left: 10px;
+    }
+
+    .announcements_box p{
+        margin-left: 10px;
+    }
+
+    .announcements_box .button_left{
+        margin-left: 4px;
+        margin-right: 9px;
+    }
+
+    .announcements_box .button_right{
+         margin-right: -6px;
+    }
+    .tasks_box ul li h3{
+        line-height: 60px;
+        margin-left: 16px;
+        font-size: 18px;
+    }
+
+
+
+    /******************** tasks stuff *********************/
+
+    .tasks_box ul li h3{
+        font-size: 21px;
+    }
+
+    /******************* analytics stuff ******************/
+    .analytics_box h2{
+         margin: 32px 0 10px 55px;
+    }
+    .analytics_box .analytics_body .activity .activity_top h4{
+         margin-left: 105px;
+    }
+    .analytics_box .analytics_body .activity img{
+         margin-left: 85px;
+    }
+    .analytics_box .checkbox_form{
+         margin: 20px 0 100px 155px;
+         width: 475px;
+    }
+    .analytics_box .analytics_body .channels .channels_content{
+         margin: 0 0 0 25px;
+    }
+    
+    /***************** bannerbox stuff **********************/
+
+    .banner_box .banners_body{
+        width: 80%;
+        margin: auto;
+    }
+
+
+    /***************** pics stuff ********************/
+
+    .pics_box > div > div{
+         margin: 30px;
+         height: 160px;
+         width: 280px;
+         background: white;
+         border-radius: 5px;
+    }
+
+    .pics_box > .pics_body{
+         width: 90%;
+    }
+
+    /******************* footer *********************/
+    .footer .centered{
+        width: 100%;
+         margin: auto;
+    }
+
+    .footer .social_media_icon{
+         margin-left: -5px;
+    }
+}

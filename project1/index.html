@@ -1,49 +1,395 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script type="text/javascript" src="//use.typekit.net/qve6pmb.js"></script>
+        <script type="text/javascript">try{ Typekit.load();}catch(e){}</script>
+        <script>
+            // used scripts to change img source for nav icons as img:hover{ change src} isnt supported in css 
+            //admittedly i couldve made divs inside the li's and changed the background img of those
+            function hover(e, num){
+                 e.setAttribute('src', 'img/menu_item'+num+'_hover.png');
+            }
+            function unhover(e, num){
+                 e.setAttribute('src', 'img/menu_item'+num+'.png');
+            }
+        </script>
     </head>
     <body>
-
-        <div class="navbar">
+        <div class="container-fluid header_bar">
+            <div class="container header_box">
+                <div class="row inherit_height">
+                    <div class="col-xs-12 inherit_height">
+                        <a href='#'>
+                            <img class="right"  alt="settings" src="img/settings_white_on_blue.png">
+                        </a>
+                            <img class="right"  alt="vertical bar" src="img/vert.png">
+                        <a href='#'>
+                            <img class="right"  alt="question" src="img/question_white_on_blue.png">
+                        </a>
+                            <img class="right"  alt="vertical bar" src="img/vert.png">
+                        <a href='#'>
+                            <p class="right">
+                            <strong>MINI of Raleigh</strong> 
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar container_fluid">
             <div class="container">
+                <ul class="navbar_list center">
+                    <li>
+                        <a href='#'>
+                            <img class="menu_item" alt="item1" src="img/menu_item1.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                            <img class="menu_item" alt="item2" src="img/menu_item2.png" onmouseover="hover(this, '2')" onmouseout="unhover(this, '2')">
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                            <img class="menu_item" alt="item3" src="img/menu_item3.png"onmouseover="hover(this, '3')" onmouseout="unhover(this, '3')">
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                            <img class="menu_item" alt="item4" src="img/menu_item4.png"onmouseover="hover(this, '4')" onmouseout="unhover(this, '4')">
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                            <img class="menu_item" alt="item5" src="img/menu_item5.png"onmouseover="hover(this, '5')" onmouseout="unhover(this, '5')">
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#'>
+                            <img class="menu_item" alt="item6" src="img/menu_item6.png"onmouseover="hover(this, '6')" onmouseout="unhover(this, '6')">
+                        </a>
+                    </li>
+                </ul>
+                <img class="active_indicator" alt="indicator" src="img/menu_marker.png">
             </div>
         </div>
         
         <div class="container dashboard_box">
+            <h1>Dashboard</h1>
+            <div class="input-group"> 
+                <input type="text" class="form-control"> 
+                <span class="input-group-btn"> 
+                    <button class="btn btn-default" type="button">
+                        <span class="glyphicon glyphicon-search"></span> 
+                    </button> 
+                </span> 
+            </div>
         </div>
 
         <div class="container content_box">
             <div class="row announcements_box">
-                <div class="col-xs-2">
+                <div class="col-xs-12 col-md-2 col inherit_height">
+                    <h4 class="left">
+                        announcements 
+                    </h4>
                 </div>
-                <div class="col-xs-9">
+                <div class="clearfix visible-xs-block visible-sm-block"></div>
+                <div class="col xs-12 col-sm-11 col-md-9 col inherit_height">
+                    <p class="left">
+                        Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sagittis lacus 
+                    </p>
                 </div>
-                <div class="col-xs-1">
+                <div class="clearfix visible-xs-block"></div>
+                <div class="col-xs-12 col-sm-1 col-md-1 col inherit_height">
+                    <a href='#'>
+                        <img class="left announcements_button button_left" alt="previous announcement" src="img/left_nav_button.png">
+                    </a>
+                    <a href='#'>
+                        <img class="left announcements_button button_right mirror" alt="next announcement" src="img/left_nav_button.png">
+                    </a>
                 </div>
             </div>
             <div class="row information_box">
-                <div class="col-xs-4 information_left_col">
+                <div class="col-xs-12 col-md-4 information_left_col">
                     <div class="tasks_box">
+                        <h2 class="left">
+                            Tasks 
+                        </h2>
+                        <a href='#'>
+                            <img class="right settings_img" alt="Dashboard Settings" src="img/settings.png">
+                        </a>
+                        <ul>
+                            <li>
+                                <div class="left list_number_circle">
+                                    <h4>
+                                        1 
+                                    </h4> 
+                                </div>
+                                <h3 class="left">
+                                    Welcome Contacts 
+                                </h3>
+                                <div class="right list_box_right">
+                                    <span class="left glyphicon glyphicon-user"></span> 
+                                    <h4 class="left">
+                                        32 
+                                    </h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left list_number_circle">
+                                    <h4>
+                                        2 
+                                    </h4> 
+                                </div>
+                                <h3 class="left">
+                                    Provide Responses 
+                                </h3>
+                                <div class="right list_box_right">
+                                    <span class="left glyphicon glyphicon-user"></span> 
+                                    <h4 class="left">
+                                        36 
+                                    </h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left list_number_circle">
+                                    <h4>
+                                        3 
+                                    </h4> 
+                                </div>
+                                <h3 class="left">
+                                    Review Activity 
+                                </h3>
+                                <div class="right list_box_right">
+                                    <span class="left glyphicon glyphicon-user"></span> 
+                                    <h4 class="left">
+                                        36 
+                                    </h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left list_number_circle">
+                                    <h4 class="left">
+                                        4 
+                                    </h4> 
+                                </div>
+                                <h3 class="left">
+                                    Reach Out 
+                                </h3>
+                                <div class="right list_box_right">
+                                    <span class="left glyphicon glyphicon-user"></span> 
+                                    <h4 class="left">
+                                        3 
+                                    </h4>
+                                </div>
+                            </li>
+                         </ul>
                     </div>
                     <div class="recommendations_box">
+                        <h2 class="left">
+                            Recommendations 
+                        </h2>
+                        <ul>
+                            <li>
+                                <div class="left img_box">
+                                    <img class= alt="icon" src="img/note_icon.png">
+                                </div>
+                                <div class="left list_details">
+                                    <span class="mini_text">Article</span>
+                                    <h5>
+                                        7 Steps to getting more Fans
+                                    </h5>
+                                </div>
+                            </li> 
+                            <li class="bigger">
+                                <div class="left img_box">
+                                    <img alt="icon" src="img/note_icon.png">
+                                </div>
+                                <div class="left list_details">
+                                    <span class="mini_text">Article</span>
+                                    <h5>
+                                       Increase traction with more interactions 
+                                    </h5>
+                                </div>
+                            </li> 
+                            <li>
+                                <div class="left img_box">
+                                    <img alt="icon" src="img/check_icon.png">
+                                </div>
+                                <div class="left list_details">
+                                    <span class="mini_text">Checklist</span>
+                                    <h5>
+                                        Creating a Promotion 
+                                    </h5>
+                                </div>
+                            </li> 
+                            <li>
+                                <div class="left img_box">
+                                    <img alt="icon" src="img/bulb_icon.png">
+                                </div>
+                                <div class="left list_details">
+                                    <span class="mini_text">Tip</span>
+                                    <h5>
+                                        Share More 
+                                    </h5>
+                                </div>
+                            </li> 
+                        </ul>
                     </div>
                 </div>
-                <div class="col-xs-8 information_right_col">
+                <div class="clearfix visible-xs-block visible-sm-block"></div>
+                <div class="col-xs-12 col-md-8 information_right_col">
                     <div class="analytics_box">
+                        <h2 class="left">
+                            Analytics 
+                        </h2>
+                        <div class="left analytics_body">
+                            <div class="left activity">
+                                <div class="left activity_top">
+                                    <h4 class="left">
+                                        activity 
+                                    </h4>
+                                    <div class="right dropdown btn-group"> 
+                                        <button type="button" class="date_button btn btn-default">06/28/11 - 07/21/11</button> 
+                                        <button type="button" class="date_button btn btn-default dropdown-toggle" data-toggle="dropdown"> 
+                                            <span class="glyphicon glyphicon-chevron-down"></span> 
+                                         </button> 
+                                    </div>
+                                </div>
+                                <img class="chart" alt="activity chart" src="img/chart.png">
+                            </div>
+                            <div class="left channels">
+                                <div class="left channels_content">
+                                    <h4 class="left">
+                                        channels 
+                                    </h4>
+                                    <img class="pie_chart" alt="pie chart" src="img/pie_chart.png">
+                                    <h4 class="left">
+                                        referrals 
+                                    </h4>
+                                    <img class="pie_chart" alt="pie chart" src="img/pie_chart.png">
+                                </div> 
+                            </div>
+                        </div>
+                        <form class="left checkbox_form">
+                            <input type="checkbox" class="social_media_checkbox" name="facebook" value="facebook">
+                            <label class="left" for="fb"></label>
+                            <img class="left checkbox_label" alt="facebook" src="img/face.png">
+                            <input type="checkbox" class="social_media_checkbox" name="twitter" value="twitter">
+                            <label class="left" for="twit"></label>
+                            <img class="left checkbox_label" alt="twitter" src="img/twit.png">
+                            <input type="checkbox" class="social_media_checkbox" name="foursquare" value="foursquare">
+                            <label class="left" for="fs"></label>
+                            <img class="left checkbox_label" alt="foursquare" src="img/foursquare.png">
+                            <input type="checkbox" class="social_media_checkbox" name="google" value="google">
+                            <label class="left" for="ggl"></label>
+                            <img class="left checkbox_label" alt="google" src="img/google.png">
+                        </form>
                     </div>
-                    <div class="graph_box">
+                    <div class="banner_box">
+                        <div class="banners_body">
+                            <div class="contacts left">
+                                <a href='#'>
+                                    <img alt="contacts" src="img/contacts.png">
+                                </a>
+                            </div>
+                            <div class="customers right">
+                                <a href='#'>
+                                    <img alt="customers" src="img/customers.png">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="DIN_box">
+                        <div>
+                            <div class="half_left_circle left">
+                                <a href="" class="fill-div">
+                                    <span class="glyphicon glyphicon-chevron-left left"></span> 
+                                </a> <!-- this makes the div clickable -->
+                            </div>
+                            <p>
+                            DID YOU KNOW?<br>
+                            Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod.
+                            </p>
+                            <div class="half_right_circle right">
+                                <a href="" class="fill-div">
+                                    <span class="glyphicon glyphicon-chevron-right right"></span> 
+                                </a> <!-- this makes the div clickable -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row ads_box">
+            <div class="row pics_box">
+                <div class="pics_body">
+                    <div class="pic1 left">
+                        <a href='#'>
+                            <img alt="pic2" src="img/left_pic.png">
+                        </a>
+                    </div>
+                    <div class="pic2 left">
+                        <a href='#'>
+                            <img class="afroman" alt="pic3" src="img/crew.png">
+                        </a>
+                    </div>
+                    <div class="pic3 left">
+                        <a href='#'>
+                            <img alt="pic4" src="img/right_pic.png">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="footer">
+        <div class="footer container-fluid">
             <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col">
+                        <div class="col1">
+                            <a href='#'>
+                                Tutorials
+                            </a>
+                            <a href='#'>
+                                <img alt="line" src="img/line_grey_on_white.png">
+                            </a>
+                            <a href='#'>
+                                Support
+                            </a>
+                            <a href='#'>
+                                <img alt="line" src="img/line_grey_on_white.png">
+                                Blog    
+                            </a>
+                        </div>
+                    </div> 
+                    <div class="col-xs-9 col-md-6 col-lg-7 col">
+                        <p>
+                        <a href='#'>
+                            <strong>Arial Winter</strong> likes your <strong>Win A Cooper Sweapstakes</strong> Promotion
+                        </a>
+                        </p>
+                        <a href='#'>
+                            <span class="right glyphicon glyphicon-chevron-up"></span>
+                        </a>
+                    </div>
+                    <div class="clearfix visible-sm-block visible-xs-block"></div>
+                    <div class="col-xs-6 col-md-2 col-lg-1 col">
+                        <div class="centered">
+                            <a href="#">
+                                <p class="right adjust_margin">
+                                    <strong>Logout</strong>
+                                </p>
+                                <img class="right car_icon" alt="car icon" src="img/car_icon.png">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-1 col-lg-1 col">
+                        <a href='#'>
+                            <img class="social_media_icon" alt="social media" src="img/sm.png"> 
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
