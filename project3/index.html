@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.3/css/jquery.dataTables.min.css">
+
+        <!-- scripts -->
+        <script src="js/jquery.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <script src="http://cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+        <script src="js/ready.js"></script>
+        
+    </head>
+    <body>
+        <div class='container title'>
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <h1>
+                        Likelihood of Hospital Aquired Illnesses <br>in New York State.
+                    <h1> 
+                </div> 
+            </div>
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <h2>
+                        All acute care hospitals are required to report certain hospital-acquired infections (HAIs) to the New York State Department of Health (NYSDOH). This includes central line-associated blood stream infections in intensive care units; surgical site infections following colon, hip replacement/revision, and coronary artery bypass graft; and Clostridium difficile infections.
+                    <h2> 
+                </div> 
+            </div> 
+        </div>
+        <hr>
+        <div class='container section0'>
+            <div class='row'>
+                <div class='col-xs-12 col-md-6 fact'>
+                    <div id='fact0' class='fact_shell'>
+                    </div>
+                </div> 
+                <div class='col-xs-12 col-md-6 fact'>
+                    <div id='fact1' class='fact_shell'>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+        <hr>
+        <div class='container section1'>
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <h3>
+                        The overall quality of a hospital can be judged by several statistics and benchmarks. If we look at the percentage of a hospital's patients with hospital-aquired infections, these are who the awards for best and worst hospitals would go to in the state of New York.   
+                    </h3> 
+                </div> 
+            </div> 
+            <div class='row'>
+                <div class='col-xs-12 col-md-6'>
+                    <div id="hospitals_chart2" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+                </div> 
+                <div class='col-xs-12 col-md-6'>
+                    <div id="hospitals_chart1" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+                </div> 
+            </div>
+        </div>
+        <hr>
+        <div class='container section2'>
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <h3>
+                        Hospital-aquired infections have decreased over the past five years. This is due to better treatment equipment and to the fact that the hospitals with the historically worst HAI percentages have recently closed. 
+                    </h3> 
+                </div> 
+            </div>
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <div id="date_chart" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+                </div>
+            </div> 
+        </div>
+        <div class='container section3'>
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <h3>
+                        Details for each hospital in the state of New York from 2008-2012 can be found below. 
+                    </h3> 
+                </div>         
+            </div> 
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <table id='table' class='display'></table>
+                </div> 
+            </div>
+        </div>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-xs-12'>
+                    <a href='https://catalog.data.gov/dataset/hospital-acquired-infections-beginning-2008'>Data Source</a> 
+                </div> 
+            </div> 
+        </div>
+    </body>
+</html>
